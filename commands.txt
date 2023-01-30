@@ -1,0 +1,15 @@
+   git clone https://github.com/ma08/columbia_e6998_speech.git
+   ./columbia_e6998_speech/kaldi_prerequisites.sh 
+   ./columbia_e6998_speech/cuda_drivers.sh 
+   nvidia-smi
+   cd kaldi-trunk/tools/
+   ./extras/check_dependencies.sh 
+   ./extras/install_mkl.sh 
+   sudo apt-get install unzip gfortran
+   ./extras/check_dependencies.sh 
+   make -j 8
+   cd ../src
+   ./configure 
+   make depend -j 8
+   make -j 8
+   ./nnet3bin/cuda-gpu-available 
