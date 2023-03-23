@@ -64,7 +64,8 @@ In the following steps, we will create a VM with GPU, install Nvidia CUDA driver
    - GPUs: `1 x NVIDIA Tesla K80`
    - Zone: `us-east1-c`
    - Boot disk and local disks: `1.2 TB (Type: Standard persistent disk)`. **Make sure to change from default type.**
-     - Deletion Rule: Keep Boot Disk
+     - Deletion Rule: `Keep Boot Disk`
+     - The `Keep Boot Disk` rule is a safety option to keep your data/setup in case VM instance is deleted for unexpected reasons. However, if you intend to delete a VM instance completely along with the disk, you would need to **manually delete** the disk as well from [the disks page](https://console.cloud.google.com/compute/disks) after the VM deletion.
   
 ### SSH to VM
 While you can use the in-browser SSH session provided by Google Cloud, it is strongly advised to SSH from the terminal on your local machine. The in-browser SSH has some issues, it generally gets killed automatically after a while.
