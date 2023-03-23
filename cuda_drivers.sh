@@ -1,3 +1,3 @@
-wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+wget https://developer.download.nvidia.com/compute/cuda/11.2.0/local_installers/cuda_11.2.0_460.27.04_linux.run
 echo "Running driver installation script"
-sudo sh ./cuda_10.2.89_440.33.01_linux.run
+sudo sh cuda_11.2.0_460.27.04_linux.run
